@@ -40,3 +40,6 @@ npm-debug.log
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+
+# The soft link created by Render's build.sh
+/_render
