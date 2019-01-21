@@ -10,8 +10,6 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :phoenix_distillery, PhoenixDistilleryWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
-  url: [host: "localhost", port: {:system, "PORT"}], # This is critical for ensuring web-sockets properly uthorize.
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   root: ".",
