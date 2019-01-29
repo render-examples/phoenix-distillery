@@ -15,8 +15,6 @@ cd assets && npm install && npm run deploy && cd ..
 # create release
 mix do phx.digest, release --env=prod --no-tar
 
-echo
-echo "Linking release $APP_NAME:$APP_VSN to _render/"
+echo "\nLinking release $APP_NAME:$APP_VSN to _render/"
 
-rm -rf _render
-ln -s "_build/$MIX_ENV/rel/$APP_NAME" _render
+ln -sf "_build/$MIX_ENV/rel/$APP_NAME" _render
