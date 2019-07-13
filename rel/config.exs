@@ -7,10 +7,10 @@
 |> Path.wildcard()
 |> Enum.map(&Code.eval_file(&1))
 
-use Mix.Releases.Config,
-    # This sets the default release built by `mix release`
+use Distillery.Releases.Config,
+    # This sets the default release built by `mix distillery.release`
     default_release: :default,
-    # This sets the default environment used by `mix release`
+    # This sets the default environment used by `mix distillery.release`
     default_environment: Mix.env()
 
 # For a full list of config options for both releases
@@ -31,13 +31,13 @@ environment :dev do
   # dev mode.
   set dev_mode: true
   set include_erts: false
-  set cookie: :"bK(>k2jtMa:>)Xbfsun.Urqcj1Ui~}H^[|)X(Ein}l<S/<nKmeAEWXPFhzSXm[LS"
+  set cookie: :"H7[aiXD}Wu~Zd6iasO[=<rO{F*P|igcP8Y&M!gBOYz(5!>w8AyZ~myy|%@TedtE*"
 end
 
 environment :prod do
   set include_erts: true
   set include_src: false
-  set cookie: :"1QX.]:KCWfNd6V4.[()BUfQR7i%NYO/|wIDh6/{_E|f:0]Ant)E_Ac*AUm}i<Z~^"
+  set cookie: :"IZ{JG77epkB@OqP&jax=l{WrzmyMAL?EHIFg<WPXd9;[]D2^g;FtB@a@8etaj?a>"
   set config_providers: [
     {Mix.Releases.Config.Providers.Elixir, ["${RELEASE_ROOT_DIR}/etc/config.exs"]}
   ]
@@ -48,7 +48,7 @@ end
 
 # You may define one or more releases in this file.
 # If you have not set a default release, or selected one
-# when running `mix release`, the first release in the file
+# when running `mix distillery.release`, the first release in the file
 # will be used by default
 
 release :phoenix_distillery do
