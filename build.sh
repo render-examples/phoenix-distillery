@@ -13,7 +13,7 @@ mix compile
 cd assets && npm install && npm run deploy && cd ..
 
 # create release
-mix do phx.digest, release --env=prod --no-tar
+mix do phx.digest, distillery.release --env=prod --no-tar
 
 echo "Linking release $APP_NAME:$APP_VSN to _render/"
 
