@@ -39,7 +39,7 @@ environment :prod do
   set include_src: false
   set cookie: :"IZ{JG77epkB@OqP&jax=l{WrzmyMAL?EHIFg<WPXd9;[]D2^g;FtB@a@8etaj?a>"
   set config_providers: [
-    {Mix.Releases.Config.Providers.Elixir, ["${RELEASE_ROOT_DIR}/etc/config.exs"]}
+    {Distillery.Releases.Config.Providers.Elixir, ["${RELEASE_ROOT_DIR}/etc/config.exs"]}
   ]
   set overlays: [
     {:copy, "rel/config/config.exs", "etc/config.exs"}
