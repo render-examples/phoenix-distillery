@@ -13,12 +13,12 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "terser-webpack-plugin": "^2.3.6",
-    "webpack": "^4.43.0",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.11"
   }
 }
